@@ -1,0 +1,49 @@
+{
+  "name": "react-dropzone-with-hooks-and-csv-parsing",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.25.0",
+    "bluebird": "^3.7.2",
+    "csv": "5.1.1",
+    "lodash": "^4.17.21",
+    "monday-sdk-js": "^0.1.3",
+    "monday-ui-react-core": "^1.0.3",
+    "react": "^16.13.0",
+    "react-csv": "^2.2.2",
+    "react-dom": "^16.13.0",
+    "react-dropzone": "10.1.7",
+    "react-refresh": "^0.11.0",
+    "react-scripts": "3.4.0"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3",
+    "concurrently": "^5.2.0",
+    "cross-port-killer": "^1.2.1",
+    "ngrok": "^3.2.7"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "scripts": {
+    "start": "npm run stop && concurrently \"npm run server\" \"npm run expose\"",
+    "build": "react-scripts build",
+    "expose": "ngrok http 3000",
+    "server": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "stop": "kill-port 3000 && kill-port 4049 && kill-port 4040"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
